@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Identificación de dibujos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js" type="text/javascript"></script>
+  
+  
+    
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body background="background.jpg">
+<!-- Modal -->
+<div id="myModal" class="modal fade">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="modal-title">Dibujos</h2>
+      </div>
+
+      <div class="modal-body">
+        <img src="sketch1.png">
+        <img src="sketch2.png">
+      </div>
+
+    </div>
+</div>
+<center>
+<div class = "btn heading"> <h1>Identificación de imágenes en tiempo real</h1>
+  <center>
+  <div class = "col-lg-6 col-md-6 col-sm-8 heading_div">
+    <h2>Dibujos que el modelo identifica:
+      <button id="show_sketch" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Mostrar dibujos</button>
+    </h2>
+  </div>
+  </center>
+  <br>
+</div>
+</center>
+<br>
+  <br>
+    <!-- Agrega la clase de columna bootstrap tanto al div que contiene el nombre del objeto como a la precisión del objeto, elimina btn-warning y agrega la clase de botón bootstrap que tiene un color de fondo blanco y no amarillo -->
+    <div class = "col-lg-6 col-md-6 col-sm-8">    
+        <p class = "btn btn-light result_para_tag"> Etiqueta:
+      <span id = "label"> </span>
+    </p>
+    <br>
+    <br>
+    <p class = "btn btn-light result_para_tag"> Confianza:
+      <span id = "confidence"> </span>
+    </p>
+  <br><br>
+  <button class="btn btn-danger btn-lg" onclick="clearCanvas()">Borrar lienzo</button>
+      <!--Actividad para agregar el color del lápiz-->
+      <br><br>
+    <p class = "btn btn-light result_para_tag2">Color de lápiz: <input type="text" id="AddColor"></p>
+    <br>
+    <br>
+    <p class = "btn btn-light result_para_tag2">Ancho de lápiz: <input type="text" id="weight"></p>
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>
+

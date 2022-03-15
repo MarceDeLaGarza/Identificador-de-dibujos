@@ -1,0 +1,57 @@
+.heading
+  {
+    /* Cambia el color de fondo del encabezado */
+    background-color: #14f34c;
+    font-size: 23px;
+    width: 100%;
+    margin: 0px;
+    box-shadow:5px 5px 5px grey;
+  }
+  .heading_div
+  {
+    float: none ; 
+    background: white ; 
+    padding: 10px; 
+    border-radius: 20px; 
+    color: black;
+    box-shadow:5px 5px 5px grey;
+  }
+  
+  .result_para_tag
+  { 
+    background: white;
+    font-size: 20px;
+    box-shadow:5px 5px 5px grey;
+/* aplica borde solo en la parte inferior del botón */
+    border-bottom: 5px solid rgb(64, 156, 241);
+  }
+  .result_para_tag2
+  { 
+    background: white;
+    font-size: 15px !important;
+    box-shadow:5px 5px 5px grey;
+/* aplica borde solo en la parte inferior del botón */
+    border-bottom: 5px solid #14f34c;
+  }
+  #show_sketch
+  {
+    float:right;
+  }
+  canvas 
+  {
+    border:5px solid white;
+    border-radius:20px;
+    animation-name: example;
+    animation-duration: 4s;
+    margin-top: 50px; 
+    animation-iteration-count: infinite; 
+  }
+  @keyframes example {
+
+    from {box-shadow: 1px 1px 38px grey;}
+    to {box-shadow: 1px 1px 38px white;}
+  
+  }
+  #label, #confidence{
+    visibility: visible;
+  }
